@@ -14,7 +14,7 @@ const RandomUser = () => {
         const response = await  axios.get('https://randomuser.me/api/')
          const user = response.data.results[0];
         setUserData({
-            name:user.name.title,
+            name:`${user.name.first} ${user.name.last}`,
             email:user.email, 
             number: user.phone,
             imgSrc: user.picture.large,
